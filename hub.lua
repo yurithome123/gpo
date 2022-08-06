@@ -141,7 +141,7 @@ function CFAHub:CreateWindow(title, gameName, intro)
     end
 
     local themes = {
-        SchemaColor = Color3.fromRGB(79, 195, 247),
+        SchemaColor = Color3.fromRGB(0, 255, 0),
         TextColor = Color3.fromRGB(255, 255, 255),
         Header = Color3.fromRGB(22, 22, 22),
         Container = Color3.fromRGB(34, 34, 34),
@@ -150,7 +150,7 @@ function CFAHub:CreateWindow(title, gameName, intro)
         Drop = Color3.fromRGB(28, 28, 28),
         ScrollBar = Color3.fromRGB(149, 149, 149),
         NotiBackground = Color3.fromRGB(0, 0, 0),
-        Glow = Color3.fromRGB(79, 195, 247),
+        Glow = Color3.fromRGB(0, 255, 0),
         Logo = "https://cdn.discordapp.com/attachments/1004562097725771888/1005510475037028412/5money.png"
     }
 
