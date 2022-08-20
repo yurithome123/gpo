@@ -6,7 +6,7 @@ local plr = game.Players.LocalPlayer
 local queue_on_teleport = queue_on_teleport
 if syn then queue_on_teleport = syn.queue_on_teleport end
 queue_on_teleport([[
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/yurithome123/gpo/main/5%20money_gpo.lua"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/yurithome123/gpo/main/MY%20SCRIPT.lua"))()
 ]])
 local NguyHiem=false
 local Settings = {
