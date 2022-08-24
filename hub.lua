@@ -1,5 +1,5 @@
 
-local CFAHub = {}
+local Yuri = {}
 
 warn("Preparando UI...")
 
@@ -94,7 +94,7 @@ function Animate:CreateGradient(object)
     UIGradient.Parent = object
 end
 
-function CFAHub:DraggingEnabled(frame, parent)
+function Yuri:DraggingEnabled(frame, parent)
     parent = parent or frame
 
     local dragging = false
@@ -128,10 +128,10 @@ function CFAHub:DraggingEnabled(frame, parent)
     end)
 end
 
-local GuiName = "5MONEYHubPremium"
+local GuiName = "YuriUWU_Premium"
 
-function CFAHub:CreateWindow(title, gameName, intro)
-    title = title or "<font color=\"#00FF04\">5MONEY Premium</font>"
+function Yuri:CreateWindow(title, gameName, intro)
+    title = title or "<font color=\"#00FF04\">YuriUWU_Premium</font>"
     gameName = gameName or "N/A"
 
     for _, v in pairs(CoreGui:GetChildren()) do
@@ -151,21 +151,21 @@ function CFAHub:CreateWindow(title, gameName, intro)
         ScrollBar = Color3.fromRGB(149, 149, 149),
         NotiBackground = Color3.fromRGB(0, 0, 0),
         Glow = Color3.fromRGB(0, 255, 0),
-        Logo = "https://cdn.discordapp.com/attachments/1004562097725771888/1005510475037028412/5money.png"
+        Logo = "https://cdn.discordapp.com/attachments/984603644114653217/1011806564031664208/unknown.png"
     }
 
-    table.insert(CFAHub, title)
+    table.insert(Yuri, title)
 
-    function CFAHub:SetTheme(theme, color3)
+    function Yuri:SetTheme(theme, color3)
         themes[theme] = color3
     end
 
-    local CFAHubGui = Instance.new("ScreenGui")
+    local YuriGui = Instance.new("ScreenGui")
 
     if intro == true then
         local Logo = Instance.new("ImageLabel")
         
-        Logo.Parent = CFAHubGui
+        Logo.Parent = YuriGui
         Logo.AnchorPoint = Vector2.new(0.5, 0.5)
         Logo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
         Logo.BackgroundTransparency = 1.000
@@ -221,7 +221,7 @@ function CFAHub:CreateWindow(title, gameName, intro)
     UIListLayout.Padding = UDim.new(0, 8)
     
     CurrentAlert.Name = "NotiContainer"
-    CurrentAlert.Parent = CFAHubGui
+    CurrentAlert.Parent = YuriGui
     CurrentAlert.AnchorPoint = Vector2.new(1, 1)
     CurrentAlert.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
     CurrentAlert.BackgroundTransparency = 1.000
@@ -229,7 +229,7 @@ function CFAHub:CreateWindow(title, gameName, intro)
     CurrentAlert.Size = UDim2.new(1, -10, 1, -10)
     CurrentAlert.ZIndex = 9
 
-    function CFAHub:AddNoti(header, message, duration, buttonEnable, callback)
+    function Yuri:AddNoti(header, message, duration, buttonEnable, callback)
         header = header or "Announcement"
         message = message or "Nil"
         duration = duration or 120
@@ -444,7 +444,7 @@ function CFAHub:CreateWindow(title, gameName, intro)
         end)
     end -- final
 
-    function CFAHub:ToggleUI()
+    function Yuri:ToggleUI()
         if Container.Visible == true then
             Utility:TweenObject(UIScale, {Scale = 0.95}, 0.25)
             wait(0.25)
@@ -455,14 +455,14 @@ function CFAHub:CreateWindow(title, gameName, intro)
         end
     end
 
-    CFAHub:DraggingEnabled(Header, Container)
+    Yuri:DraggingEnabled(Header, Container)
 
-    CFAHubGui.Name = GuiName
-    CFAHubGui.Parent = CoreGui
-    CFAHubGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+    YuriGui.Name = GuiName
+    YuriGui.Parent = CoreGui
+    YuriGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
     Container.Name = "Container"
-    Container.Parent = CFAHubGui
+    Container.Parent = YuriGui
     Container.AnchorPoint = Vector2.new(0.5, 0.5)
     Container.BackgroundColor3 = themes.Container
     Objects[Container] = "Container"
@@ -2270,4 +2270,4 @@ function CFAHub:CreateWindow(title, gameName, intro)
     return Tabs
 end
 
-return CFAHub
+return Yuri
