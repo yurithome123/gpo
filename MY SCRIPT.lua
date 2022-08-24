@@ -51,19 +51,19 @@ local SaveFileName = plr.Name.."_GPO.json"
 
 function SaveSettings()
     local HttpService = game:GetService("HttpService")
-    if not isfolder("5MONEY") then
-        makefolder("5MONEY")
+    if not isfolder("Yuri") then
+        makefolder("Yuri")
     end
-    writefile("5MONEY/" .. SaveFileName, HttpService:JSONEncode(TableToSave(Settings)))
+    writefile("Yuri/" .. SaveFileName, HttpService:JSONEncode(TableToSave(Settings)))
 end
 
 function ReadSetting() 
     local s,e = pcall(function() 
         local HttpService = game:GetService("HttpService")
-        if not isfolder("5MONEY") then
-            makefolder("5MONEY")
+        if not isfolder("Yuri") then
+            makefolder("Yuri")
         end
-        return HttpService:JSONDecode(readfile("5MONEY/" .. SaveFileName))
+        return HttpService:JSONDecode(readfile("Yuri/" .. SaveFileName))
     end)
     if s then return e 
     else
@@ -428,7 +428,7 @@ old = hookmetamethod(game, "__namecall", function(...)
         SetVaoDau(GetVauDau()+1)
         if Settings.RifleKick then
             if GetVaoDau()>480 then 
-                plr:Kick("\n[5MONEY_PREMIUM]\nKicked 499º tiro de rifle (Rifle Kick)")
+                plr:Kick("\n[Yuri_uwu_PREMIUM]\nKicked 499º tiro de rifle (Rifle Kick)")
             end
         end
     end
@@ -852,9 +852,9 @@ local txt="Grand Piece Online"
 if identifyexecutor()=="Krnl" then 
     txt="Grand Piece Online (KRNL)"
 end
-local Window = CFAHub:CreateWindow("<font color=\"#00FF04\">5MONEY_Hub</font>", txt, true)
+local Window = CFAHub:CreateWindow("<font color=\"#00FF04\">Yuri_uwu</font>", txt, true)
 
-CFAHub:AddNoti("5MONEY_Premium", "UI Loaded!", 6)
+CFAHub:AddNoti("Yuri_uwu_Premium", "UI Loaded!", 6)
 function GetSword()
     for k, v in pairs(plr.Character:GetChildren()) do
         if v:FindFirstChild("SwordEquip") then
@@ -1301,7 +1301,7 @@ plr.Backpack.ChildAdded:Connect(function(fruit)
                 local msg = {
                     ["content"] = (Settings.MentionEveryone and "@everyone") or "",
                     ["embeds"] = {{
-                        ["title"] = "GPO-5MONEY",
+                        ["title"] = "GPO-Yuri_uwu",
                         ["description"] = "Fruta Obtida",
                         ["type"] = "rich",
                         ["color"] = tonumber(47103),
@@ -1318,8 +1318,8 @@ plr.Backpack.ChildAdded:Connect(function(fruit)
                             }
                         },
                         ["footer"] = {
-                            ["icon_url"] = "https://cdn.discordapp.com/attachments/1004562097725771888/1005510475037028412/5money.png",
-                            ["text"] = "5 MONEY_HUB (" .. os.date("%X") .. ")"
+                            ["icon_url"] = "",
+                            ["text"] = "Yuri_uwu (" .. os.date("%X") .. ")"
                         }
                     }}
                 }
@@ -1626,7 +1626,7 @@ function Detect()
 	return false
 end
 function SafeModeKick() 
-    plr:Kick("\n[5MONEY]\nKickado por movimentos suspeitos! (Safe Mode)")
+    plr:Kick("\n[Yuri_uwu]\nKickado por movimentos suspeitos! (Safe Mode)")
 end
 plr.Character.ChildAdded:Connect(humadd)
 spawn(function() 
@@ -1697,7 +1697,7 @@ Section2:CreateToggle("Auto Kick", {Toggled=Settings.AutoKick,Description = "Aut
                     until tick() - CurrentTick >= Settings.AutoKickTimer * 60
                     or not Settings.AutoKick
                     if Settings.AutoKick then
-                        plr:Kick("\n[5MONEY HUB]\n".. Settings.AutoKickTimer .." minuto alcançado (Auto Kick)")
+                        plr:Kick("\n[Yuri_uwu]\n".. Settings.AutoKickTimer .." minuto alcançado (Auto Kick)")
                     end
                 end)
             end 
