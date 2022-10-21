@@ -1,0 +1,6 @@
+if game.PlaceId==2753915549 or game.PlaceId==4442272183 or game.PlaceId==7449423635 then 
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/yurithome123/gpo/main/MY%20SCRIPT.lua"))()
+end
+ --[[ if game.PlaceId==xxxxxxxxxx or game.PlaceId==xxxxxxxxxx or game.PlaceId==xxxxxxxxxx then 
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/yurithome123/gpo/main/MY%20SCRIPT.lua"))()
+end --]]
